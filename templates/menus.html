@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .category {
+            margin-top: 30px;
+        }
+        .food-item {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .food-item img {
+            width: 120px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .food-details h3 {
+            margin: 0;
+            color: #444;
+        }
+        .food-details p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .food-details span {
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Delicious Menu</h1>
+    {% for category, items in menu_items.items() %}
+        <div class="category">
+            <h2>{{ category }}</h2>
+            {% for item in items %}
+                <div class="food-item">
+                    <img src="{{ url_for('static', filename=item.img) }}" alt="{{ item.name }}">
+                    <div class="food-details">
+                        <h3>{{ item.name }}</h3>
+                        <p>{{ item.desc }}</p>
+                        <span>{{ item.price }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- templates/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Zero Hunger Connect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome to Zero Hunger Connect</h1>
+        <p>Select your login type:</p>
+        <div class="login-buttons">
+            <a href="{{ url_for('customer_login') }}" class="btn">Customer Login</a>
+            <a href="{{ url_for('restaurant_login') }}" class="btn">Restaurant Login</a>
+        </div>
+    </div>
+</body>
+</html>

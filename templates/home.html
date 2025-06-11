@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zero Hunger Connect</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+  <header>
+    <div class="logo">Zero Hunger Connect</div>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+        <li><a href="{{ url_for('online_orders') }}">Online Orders</a></li>
+        <li><a href="{{ url_for('menus') }}">Menus</a></li>
+        <li><a href="{{ url_for('cart') }}">Cart</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('my_orders') }}">My Orders</a></li>
+        <li><a href="{{ url_for('products') }}">Products</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Saving Food. Serving People.</h1>
+    <p>Connecting restaurants with leftover food to people who need it — at the lowest prices.</p>
+    <a href="{{ url_for('menus') }}" class="btn">Explore Menus</a>
+  </section>
+
+  <section class="about-brief">
+    <h2>Why Zero Hunger Connect?</h2>
+    <p>Millions go hungry while restaurants discard good food daily. We're here to fix that.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Zero Hunger Connect</p>
+  </footer>
+</body>
+</html>

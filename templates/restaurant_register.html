@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Register - Zero Hunger Connect</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/restaurant_register.css') }}">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Restaurant Registration</h2>
+    <form action="{{ url_for('restaurant_register') }}" method="POST">
+      <input type="text" name="restaurant_name" placeholder="Restaurant Name" required>
+      <input type="text" name="food_item" placeholder="Food Item" required>
+      <input type="number" step="0.01" name="price" placeholder="Price (₹)" required>
+      <input type="number" name="quantity" placeholder="Quantity" required>
+      <input type="text" name="address" placeholder="Address/Locality" required>
+      <input type="tel" name="contact" placeholder="Customer Care Number" required>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>

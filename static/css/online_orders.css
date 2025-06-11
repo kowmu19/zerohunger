@@ -1,0 +1,65 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.orders-page {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.orders-page h1 {
+  text-align: center;
+  color: #004d40;
+  margin-bottom: 2rem;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form label {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.order-form input,
+.order-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.order-form textarea {
+  min-height: 80px;
+}
+
+.order-form button {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background-color: #004d40;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.order-form button:hover {
+  background-color: #00796b;
+}
+ 

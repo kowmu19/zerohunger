@@ -1,0 +1,53 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.orders-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.orders-container h1 {
+  color: #004d40;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.orders-list {
+  list-style: none;
+  padding: 0;
+}
+
+.order-item {
+  background-color: #e0f2f1;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.order-item h2 {
+  margin-top: 0;
+  color: #00695c;
+}
+
+.order-item p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.no-orders {
+  text-align: center;
+  color: #999;
+  font-size: 1.2rem;
+}

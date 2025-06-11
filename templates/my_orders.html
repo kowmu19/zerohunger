@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Orders - Zero Hunger Connect</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/my_orders.css') }}" />
+</head>
+<body>
+  <div class="orders-container">
+    <h1>My Orders</h1>
+    {% if orders %}
+      <ul class="orders-list">
+        {% for order in orders %}
+          <li class="order-item">
+            <h2>{{ order.food_name }} from {{ order.restaurant_name }}</h2>
+            <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+            <p><strong>Price:</strong> ₹{{ order.price }}</p>
+            <p><strong>Status:</strong> {{ order.status }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="no-orders">You have no orders yet.</p>
+    {% endif %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Login - Zero Hunger Connect</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/restaurant_login.css') }}">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Restaurant Login</h2>
+    <form action="{{ url_for('restaurant_login') }}" method="POST">
+      <input type="text" name="restaurant_name" placeholder="Restaurant Name" required>
+      
+      <input type="text" name="address" placeholder="Full Address" required>
+      <input type="tel" name="customer_care" placeholder="Customer Care Number" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products - Zero Hunger Connect</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/products.css') }}">
+</head>
+<body>
+  <div class="products-container">
+    <h1>Available Products</h1>
+    <div class="product-list">
+      {% for product in products %}
+      <div class="product-card">
+        <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}">
+        <h2>{{ product.name }}</h2>
+        <p>Rs. {{ product.price }}</p>
+        <p>Preparation Time: {{ product.preparation_time }}</p>
+        <p>Expiry Date: {{ product.expiry_date }}</p>
+        <form method="POST" action="{{ url_for('add_to_cart') }}">
+          <input type="hidden" name="product_id" value="{{ product._id }}">
+          <input type="hidden" name="customer_email" value="{{ email }}">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Add Product Form -->
+  <h2>Add New Product</h2>
+  <form action="{{ url_for('add_product') }}" method="POST">
+    <input type="text" name="name" placeholder="Product Name" required><br>
+    <input type="number" name="price" placeholder="Price (in ₹)" required><br>
+    <input type="text" name="preparation_time" placeholder="Preparation Time (e.g. 20 mins)" required><br>
+    <input type="date" name="expiry_date" required><br>
+    <input type="text" name="image" placeholder="Image path (e.g. images/paneer.jpg)" required><br>
+    <button type="submit">Add Product</button>
+  </form>
+
+</body>
+</html>
